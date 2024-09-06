@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI SQL Dashboard</title>
+  <script src="https://kit.fontawesome.com/45ddbe8588.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-background text-foreground">
+  <!-- Full-width Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="https://aicountly.com/sqldashboard/img/ai-logo.png" width="40" height="40" alt="AI SQL Logo">
+      <h1>AI SQL</h1>
+    </div>
+    <div class="header-right">
+      <div class="dropdown">
+        <span>Team SISPL 🔻</span>
+        <div class="dropdown-content">
+          <a href="#"><i class="fa-solid fa-gear" style="margin-right: 6px;color: #8B98AB;"></i>Team Settings</a>
+          <a href="#"><i class="fa-solid fa-users" style="margin-right: 6px;color: #8B98AB;"></i>Members & Groups</a>
+          <a href="#"><i class="fa-solid fa-file-contract" style="margin-right: 6px;color: #8B98AB;"></i>Team
+            Billing</a>
+          <hr>
+          <a href="#">Create Team Members</a>
+        </div>
+      </div>
+      <button class="btn-secondary">MS</button>
+    </div>
+  </header>
+
+  <div class="main-content" id="main-content">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Tables</h2>
+        <button class="btn-add">+ ADD TABLE</button>
+      </div>
+      <ul id="tableList">
+        <li class="table-item" data-table="1">+ Table 1</li>
+        <div id="summary-1" class="summary hidden">
+          <div>
+            <input type="text" placeholder="Input 1">
+            <input type="text" placeholder="Input 2">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div>
+            <input type="text" placeholder="Input 1">
+            <input type="text" placeholder="Input 2">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="index-section">
+            <input type="text">
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+          <div class="index-button">
+            <div>
+              <i class="fa-solid fa-fill"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div>
+              <button class="index">
+                ADD INDEX
+              </button>
+              <button class="column">
+                ADD Column
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <li class="table-item" data-table="2">+ Table 2</li>
+        <div id="summary-2" class="summary hidden">
+          <div>
+            <input type="text" placeholder="Input 1">
+            <input type="text" placeholder="Input 2">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div>
+            <input type="text" placeholder="Input 1">
+            <input type="text" placeholder="Input 2">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="index-section">
+            <input type="text">
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+          <div class="index-button">
+            <div>
+              <i class="fa-solid fa-fill"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div>
+              <button class="index">
+                ADD INDEX
+              </button>
+              <button class="column">
+                ADD Column
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <li class="table-item" data-table="3">+ Table 3</li>
+        <div id="summary-3" class="summary hidden">
+          <div>
+            <input type="text" placeholder="Input 1">
+            <input type="text" placeholder="Input 2">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div>
+            <input type="text" placeholder="Input 1">
+            <input type="text" placeholder="Input 2">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="index-section">
+            <input type="text">
+            <i class="fa-solid fa-key"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+          <div class="index-button">
+            <div>
+              <i class="fa-solid fa-fill"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div>
+              <button class="index">
+                ADD INDEX
+              </button>
+              <button class="column">
+                ADD Column
+              </button>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="">
+      <section class="content-area" id="content-area">
+        <div class="box">
+          <h1>1st Group Name</h1>
+          <ul class="listing">
+            <li>
+              <span><i class="fa-solid fa-key"></i>ID</span>
+              <p>bigint</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Column Name</span>
+              <p>varchar</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Row ID</span>
+              <p>mainid</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Another ID</span>
+              <p>bigint</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Column</span>
+              <p>smallint</p>
+            </li>
+          </ul>
+        </div>
+    
+        <div class="box box-02">
+          <h1 class="h1-01">2nd Group Name</h1>
+          <ul class="listing">
+            <li>
+              <span><i class="fa-solid fa-key"></i>ID</span>
+              <p>bigint</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Column Name</span>
+              <p>varchar</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Row ID</span>
+              <p>mainid</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Another ID</span>
+              <p>bigint</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Column</span>
+              <p>smallint</p>
+            </li>
+          </ul>
+        </div>
+        <div class="box box-03">
+          <h1 class="h1-01">3rd Group Name</h1>
+          <ul class="listing">
+            <li>
+              <span><i class="fa-solid fa-key"></i>ID</span>
+              <p>bigint</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Column Name</span>
+              <p>varchar</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Row ID</span>
+              <p>mainid</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Another ID</span>
+              <p>bigint</p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-key"></i>Column</span>
+              <p>smallint</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="logo-bottoms">
+        <ul>
+          <li><i class="fa-solid fa-hand"></i></li>
+          <li><i class="fa-brands fa-squarespace"></i></li>
+          <li><i class="fa-solid fa-plus" id="zoom-in" title="zoom-in"></i></li>
+          <li><i class="fa-solid fa-minus" id="zoom-out" title="zoom-out"></i></li>
+        </ul>
+      </div>
+    </main>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
